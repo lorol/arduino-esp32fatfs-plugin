@@ -16,7 +16,7 @@
 - Download the tool archive from [here](https://github.com/lorol/arduino-esp32fatfs-plugin/raw/master/src/bin/esp32fatfs.jar)
 - In your Arduino sketchbook directory, create tools directory if it doesn't exist yet.
 - Copy the tool into tools directory (the path will look like ```<home_dir>/Arduino/tools/ESP32FatFS/tool/esp32fatfs.jar```).
-- You need an executable to create the image. See in [extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra) a too for Win or take it from the author [here - mkfatfs tool](https://github.com/labplus-cn/mkfatfs/releases/tag/v1.0)  Thanks to [labplus-cn](https://github.com/labplus-cn/mkfatfs)
+- You need an executable to create the image. See for Windows and Linux (thanks @lbernstone for compiling) in the [extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra) or take it from the author [here - mkfatfs tool](https://github.com/labplus-cn/mkfatfs/releases/tag/v1.0)  Thanks to [labplus-cn](https://github.com/labplus-cn/mkfatfs)
 - Copy it to packages\esp32\tools\mkfatfs\<x.x.x>\ or on checkout (dev) environment to: packages\esp32\hardware\esp32<release>\tools\mkfatfs\
 - You can adapt it to use other fatfs image-creating tools, like [ESP32_fatfsimage](https://github.com/marcmerlin/esp32_fatfsimage)  w/ binary for Linux, you need to change the parameters example size is /1024
 - Restart Arduino IDE. 

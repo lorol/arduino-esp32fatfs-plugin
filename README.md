@@ -9,6 +9,7 @@
 - You need to select on Arduino IDE *Tools > Partition Scheme* menu a choice with FAT partition
 - The usable size of FAT partition is reduced with 1 sector of 4096 bytes (0x1000) to resolve wear leveling space requirement
 - For same reason, the image file is flashed with +4096 bytes (0x1000) offset of partition address csv table entry
+- espota doesnt work with ffat
 
 ## Installation
 
@@ -26,7 +27,7 @@
 - Open a sketch (or create a new one and save it).
 - Go to sketch directory (choose Sketch > Show Sketch Folder).
 - Create a directory named `data` and any files you want in the file system there.
-- Make sure you have selected a board, port, and closed Serial Monitor.
+- Make sure you have selected a board, partition scheme with FAT, port, and closed Serial Monitor.
 - Select *Tools > ESP32 FatFS Data Upload* menu item. This should start uploading the files into ESP32 flash file system.
 
   When done, IDE status bar will display FatFS Image Uploaded message. Might take a few minutes for large file system sizes.

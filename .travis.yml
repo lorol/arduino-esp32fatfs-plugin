@@ -24,8 +24,8 @@ script:
   - pushd $arduino_dir/build
   - echo "" | ant build
   - pushd shared/tools
-  - mkdir -p SP32LittleFS
-  - rsync -a $SRC/ SP32LittleFS/
-  - pushd SP32LittleFS
+  - mkdir -p SP32FatFS
+  - rsync -a $SRC/ SP32FatFS/
+  - pushd SP32FatFS
   - ./make.sh
   - popd && popd && popd

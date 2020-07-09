@@ -3,7 +3,9 @@
 /*
   Tool to put the contents of the sketch's "data" subfolder
   into an FatFS partition image and upload it to an ESP32 MCU
-
+  
+  Based on https://github.com/me-no-dev/arduino-esp32fs-plugin/
+  
   Copyright (c) 2015 Hristo Gochkov (hristo at espressif dot com)
 
   This program is free software; you can redistribute it and/or modify
@@ -163,7 +165,7 @@ public class ESP32FatFS implements Tool {
   }
 
   private void createAndUpload(){
-    long spiStart = 0, spiSize = 0, spiPage = 256, spiBlock = 4096, spiOffset = 4096;
+    long spiStart = 0, spiSize = 0, spiOffset = 4096;
     String partitions = "";
     
     if(!PreferencesData.get("target_platform").contentEquals("esp32")){
@@ -340,12 +342,9 @@ public class ESP32FatFS implements Tool {
 	System.out.println("[FatFS] offset : "+spiOffset);
     System.out.println("[FatFS] start  : "+spiStart);
     System.out.println("[FatFS] size   : "+(spiSize/1024));
-	//System.out.println("[FatFS] page   : "+spiPage);
-    //System.out.println("[FatFS] block  : "+spiBlock);
 
 
     try {
-	  //if(listenOnProcess(new String[]{toolPath, "-c", dataPath, "-p", spiPage+"", "-b", spiBlock+"", "-s", spiSize+"", imagePath}) != 0){
 		if(listenOnProcess(new String[]{toolPath, "-c", dataPath, "-s", spiSize+"", imagePath}) != 0){
 
         System.err.println();

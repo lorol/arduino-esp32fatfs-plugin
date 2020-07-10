@@ -9,7 +9,7 @@
 - You need to select on Arduino IDE *Tools > Partition Scheme* menu a choice with FAT partition
 - The usable size of FAT partition is reduced with 1 sector of 4096 bytes (0x1000) to resolve wear leveling space requirement
 - For same reason, the image file is flashed with +4096 bytes (0x1000) offset of partition address csv table entry
-- espota doesnt work with ffat
+- espota doesn't normally work with ffat. However I have workaround to test by modifying of library, see the [zip file in the extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra/esp32-modified-Update-lib-ffat-espota.zip)
 
 ## Installation
 

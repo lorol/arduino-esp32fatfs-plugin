@@ -6,10 +6,10 @@
 
 ## Notes
 
-- You need to select on Arduino IDE *Tools > Partition Scheme* menu a choice with FAT partition
+- On Arduino IDE menu: *Tools > Partition Scheme* select one with FAT partition
 - The usable size of FAT partition is reduced with 1 sector of 4096 bytes (0x1000) to resolve wear leveling space requirement
 - For same reason, the image file is flashed with +4096 bytes (0x1000) offset of partition address csv table entry
-- espota doesn't normally work with ffat. However I have workaround to test by modifying of library, see the [zip file in the extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra/esp32-modified-Update-lib-ffat-espota.zip)
+- To flash the data folder as FAT partition by network port (uses espota), replace your esp32-core Update library with the [modified files here](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra/esp32-modified-Update-lib-ffat-espota.zip)
 
 ## Installation
 
@@ -17,8 +17,8 @@
 - Download the tool archive from [here](https://github.com/lorol/arduino-esp32fatfs-plugin/raw/master/src/bin/esp32fatfs.jar)
 - In your Arduino sketchbook directory, create tools directory if it doesn't exist yet.
 - Copy the tool into tools directory (the path will look like ```<home_dir>/Arduino/tools/ESP32FatFS/tool/esp32fatfs.jar```).
-- You need an executable to create the image. See for Windows and Linux (thanks @lbernstone for compiling) in the [extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra) or take it from the author [here - mkfatfs tool](https://github.com/labplus-cn/mkfatfs/releases/tag/v1.0)  Thanks to [labplus-cn](https://github.com/labplus-cn/mkfatfs)
-- Copy it to <b>/tools</b> folder of esp32 platform where <b>espota</b> and <b>esptool</b> (.py or.exe) tools are located
+- You need an executable to create the image. See binary files for Windows and Linux (thanks @lbernstone for compiling) in the [extra folder](https://github.com/lorol/arduino-esp32fatfs-plugin/tree/master/extra) or take it from the author [here - mkfatfs tool](https://github.com/labplus-cn/mkfatfs/releases/tag/v1.0)  Thanks to [labplus-cn](https://github.com/labplus-cn/mkfatfs)
+- Copy <b>mkfatfs[.exe]</b> to <b>/tools</b> folder of esp32 platform where <b>espota</b> and <b>esptool</b> (.py or.exe) tools are located
 - You can modify it and rebuild to use other fatfs image-creating tools, like [ESP32_fatfsimage](https://github.com/marcmerlin/esp32_fatfsimage)  w/ binary for Linux, you need to change the parameters example size is /1024
 - Restart Arduino IDE. 
 

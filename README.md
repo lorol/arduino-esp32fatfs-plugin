@@ -1,7 +1,7 @@
 # arduino-esp32fatfs-plugin
 ## Arduino ESP32 FatFS filesystem uploader 
 
-- Arduino plugin, which packs sketch <b>data</b> folder into FatFS filesystem image and uploads the image to ESP32 flash memory
+- Arduino plugin, which packs sketch **data** folder into FatFS filesystem image and uploads the image to ESP32 flash memory
 - Identical to the [original one for SPIFFS](https://github.com/me-no-dev/arduino-esp32fs-plugin/)
 
 ## Notes

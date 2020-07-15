@@ -1,10 +1,13 @@
 # arduino-esp32fatfs-plugin
+
+***Please use the [universal combined plugin for all FS](https://github.com/lorol/arduino-esp32fs-plugin) instead of this one.***
+
 ## Arduino ESP32 FatFS filesystem uploader 
 
 - Arduino plugin, which packs sketch **data** folder into FatFS filesystem image and uploads the image to ESP32 flash memory
 - Identical to the [original one for SPIFFS](https://github.com/me-no-dev/arduino-esp32fs-plugin/)
 
-## Notes
+## Notes for FatFS
 
 - On Arduino IDE menu: *Tools > Partition Scheme* select one with FAT partition
 - The usable size of FAT partition is reduced with 1 sector of 4096 bytes (0x1000) to resolve wear leveling space requirement
